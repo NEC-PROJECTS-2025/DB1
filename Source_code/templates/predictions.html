@@ -1,0 +1,157 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    /* General styles */
+    body {
+        font-family: 'Arial', sans-serif;
+        background: linear-gradient(135deg, #f5f7fa, #c3cfe2);
+        margin: 0;
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        height: 20vh;
+    }
+
+    .container {
+        text-align: center;
+        background: rgba(255, 255, 255, 0.9);
+        padding: 30px;
+        border-radius: 15px;
+        box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+        max-width: 600px;
+        width: 90%;
+        animation: fadeIn 1s ease-in-out;
+    }
+
+    h2, h3 {
+        color: #333;
+        margin-bottom: 20px;
+        animation: slideIn 0.5s ease-in-out;
+    }
+
+    .predff, .predf {
+        margin-top: 20px;
+    }
+
+    .predff img {
+        border-radius: 10px;
+        box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .predff img:hover {
+        transform: scale(1.05);
+        box-shadow: 0 10px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .predff p {
+        font-size: 20px;
+        color: #555;
+        margin: 10px 0;
+    }
+
+    .predff a {
+        display: inline-block;
+        margin-top: 20px;
+        padding: 10px 20px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        text-decoration: none;
+        border-radius: 25px;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .predff a:hover {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        transform: translateY(-3px);
+    }
+
+    .predf form {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .predf input[type="file"] {
+        margin: 20px 0;
+        padding: 10px;
+        border: 2px dashed #6a11cb;
+        border-radius: 10px;
+        background: rgba(106, 17, 203, 0.1);
+        color: #6a11cb;
+        cursor: pointer;
+        transition: background 0.3s ease, border-color 0.3s ease;
+    }
+
+    .predf input[type="file"]:hover {
+        background: rgba(106, 17, 203, 0.2);
+        border-color: #2575fc;
+    }
+
+    .predf button {
+        padding: 10px 30px;
+        background: linear-gradient(135deg, #6a11cb, #2575fc);
+        color: white;
+        border: none;
+        border-radius: 25px;
+        cursor: pointer;
+        font-size: 18px;
+        transition: background 0.3s ease, transform 0.3s ease;
+    }
+
+    .predf button:hover {
+        background: linear-gradient(135deg, #2575fc, #6a11cb);
+        transform: translateY(-3px);
+    }
+
+    /* Animations */
+    @keyframes fadeIn {
+        from {
+            opacity: 0;
+        }
+        to {
+            opacity: 1;
+        }
+    }
+
+    @keyframes slideIn {
+        from {
+            transform: translateY(-20px);
+            opacity: 0;
+        }
+        to {
+            transform: translateY(0);
+            opacity: 1;
+        }
+    }
+</style>
+
+<div class="container">
+    {% if result %}
+        <h3>Prediction Result</h3>
+        <div class="predff">
+            <p><strong>Uploaded Image:</strong></p>
+            <img src="{{ url_for('static', filename='uploads/' + filepath) }}" alt="Uploaded Image" style="width:250px;">
+        
+            <p><strong>Result:</strong> {{ result }}</p>
+            <p><strong>Confidence:</strong> {{ confidence }}</p>
+            <a href="{{ url_for('predictions') }}">Try Another Image</a>
+        </div>
+        
+    {% else %}
+        <h2>Skin Cancer Prediction</h2>
+        <div class="predf">
+            <form method="POST" enctype="multipart/form-data">      
+                <p style="color: #6a11cb;font-weight: bold;letter-spacing: 1px;font-size: 30px;">Welcome to our AI cancer detecting model!</p>
+                <p style="font-weight: bold;margin-bottom: 40px;letter-spacing: 1px;font-size: 20px">Select an image to upload for prediction:</p>    
+                <input type="file" name="file">
+                <button type="submit">Predict</button>
+            </form>
+        </div>
+    {% endif %}
+</div>
+
+{% endblock %}

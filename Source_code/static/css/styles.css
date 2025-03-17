@@ -1,0 +1,372 @@
+html,body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+
+    
+}
+.header {
+    text-align: center;
+    padding: 20px;
+    background-color: #fefbfb;
+    margin: 0;
+    padding: 0;  
+    z-index: 1000;
+    position: fixed;
+    width: 100%;
+}
+.predf {
+    text-align: center;
+}
+
+.predf input[type="file"],
+.predf button {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 10px;
+    font-size: 16px;
+    font-weight: bold;
+    color: white;
+    background-color: #4CAF50;
+    border: none;
+    border-radius: 0px;
+    cursor: pointer;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    transition: all 0.3s ease;
+}
+
+.predf input[type="file"] {
+    /* Hides default file input appearance */
+    appearance: none;
+    -webkit-appearance: none;
+    /* Aligns text inside the file input to center */
+    text-align: center;
+    color: black;
+}
+
+.predf input[type="file"]:hover,
+.predf button:hover {
+    background-color: #089e0f;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.2);
+}
+
+.predf input[type="file"]:active,
+.predf button:active {
+    background-color: #089e0f;
+    box-shadow: 0 3px 5px rgba(0, 0, 0, 0.2);
+    transform: translateY(2px);
+    
+}
+
+.logo{
+    position: absolute;
+    top: 15.5%;
+    left: 0%;
+}
+.logo img {
+    width: 110px;
+    height: 100px;
+}
+.logo1{
+    position: absolute;
+    top: 56.8%;
+    left: 7.2%;
+}
+.logo1 img {
+    width: 220px;
+    height: 60px;
+}
+.logo2{
+    position: absolute;
+    top: 59%;
+    right: 2%;
+}
+.logo2 img {
+    width: 220px;
+    height: 60px;
+}
+.logo3{
+    position: absolute;
+    top: 25.5%;
+    left: 0%;
+}
+.logo3 img {
+    width: 179%;
+    height: 80%;
+}
+.team{
+    padding: 10px;
+    margin-left: 40px;
+}
+.team span {
+    margin: 0 10px;
+    font-weight: bold;
+    margin-bottom: 10px;
+    
+}
+
+nav {
+    background-color: black;
+    padding: 12px;
+    text-align: right;
+    position: fixed;
+    width: 100%;
+    top: 19.5%;
+    z-index: 1000;   
+}
+nav a {
+    color: black;
+    margin: 0 10px;
+    text-decoration: none;
+    font-weight: bold;
+    background-color: yellow;
+    padding-top:6px ;
+    padding-bottom:8px;
+    padding-right: 5px;
+    padding-left: 5px;
+    border-radius: 5px;
+    
+}
+nav a:hover {
+    color: yellow;
+    background-color: black;
+}
+.content {
+    padding: 20px;
+}
+/* Footer */
+footer {
+    background-color: #f1f1f1;
+    text-align: center;
+    padding: 10px;
+    margin-top: 0px;
+    position: fixed;
+    bottom: 0%;
+    width: 100%;
+    left: 0%;
+}
+footer p {
+    font-size: 14px;
+}
+.homecontent{
+    position: absolute;
+    top: 5%;
+    left: 50%;
+    width: 700px;
+    text-align: center;
+    color: #f1f1f1;
+    line-height: 200%;
+}
+.predff{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: rgb(255, 255, 255);
+    height: 350px;
+    width: 400px;
+    position: absolute; 
+    top: 40%;
+    left: 37%;
+    
+}
+
+.predff1{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    position: absolute;
+    top: 39%;
+    left: 0%;
+    
+    width: 100%;
+
+}
+.predff a{
+    text-decoration: none;
+    background-color: #3b57d4;
+    color: aliceblue;
+    border-radius: 10px;
+    padding: 7px;
+    border-style: solid;
+    border-width: 1px;
+    border-color: black;
+}
+.image-grid {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-grid1 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+.image-grid2 {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+}
+
+.image-container {
+    width: 30%; /* Fit three images per row */
+    max-width: 400px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-container img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.image-container p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+.scrollable-container {
+    height: 80vh; /* Adjust height as needed */
+    overflow-y: scroll; /* Enable vertical scrolling */
+    padding: 20px;
+    border: 1px solid #ddd; /* Optional: Add a border */
+    border-radius: 5px; /* Optional: Add rounded corners */
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1); /* Optional: Add a shadow */
+    background-color: #f9f9f9; /* Optional: Background color */
+    
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: white;
+    height: 350px;
+    width: 800px;
+    position: absolute;
+    top: 40%;
+    left: 25%;
+    align-items: center;
+    
+}
+
+form input[type="file"] {
+    margin-bottom: 15px;
+}
+
+form button {
+    padding: 10px 20px;
+    background-color: #4c6ef5;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: #3b57d4;
+}   
+
+.image-grid2 .image-container {
+    width: 750%; /* Fit three images per row */
+    max-width: 1000px;
+    text-align: center;
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    padding: 10px;
+    box-shadow: 2px 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.image-grid2 .image-container img {
+    width: 100%;
+    height: auto;
+    border-bottom: 1px solid #ddd;
+    padding-bottom: 10px;
+}
+
+.image-grid2 .image-container p {
+    margin: 10px 0 0;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.container1 {
+    display: flex;
+    gap: 20px;
+    text-align: center;
+    position: absolute;
+    top: 50%;
+
+}
+
+.image-container1 {
+    width: 500px;
+    height: 500px;
+    overflow: hidden;
+    border: 2px solid #ccc;
+    border-radius: 10px;
+    cursor: pointer;    
+}
+
+.image-container1 img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.3s ease;
+}
+
+.flowp p{
+    position: relative;
+    top: 20%;
+    text-align: center;
+}
+
+.popup {
+    display: none;
+    position: fixed;
+    z-index: 999;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.8);
+}
+
+.popup-content {
+    margin: auto;
+    display: block;
+    max-width: 90%;
+    max-height: 90%;
+}
+.popup-title {
+    margin: 20px auto;
+    text-align: center;
+    color: white;
+    font-size: 40px;
+}
+
+
+.close {
+    position: absolute;
+    top: 15px;
+    right: 35px;
+    color: white;
+    font-size: 40px;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+    color: red;
+    text-decoration: none;
+    cursor: pointer;
+}

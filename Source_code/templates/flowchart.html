@@ -1,0 +1,45 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h2 style="font-size: 30px; text-shadow: 2px 2px 20px rgb(13, 13, 13); position: absolute; left: 40%; top: 27%; color: black; border-color: black; border-width: 3px; border-style: solid; padding: 3px;">
+    Project Flowchart
+</h2>
+<p style="position: absolute; top: 40%; text-align: center;">
+    The flowchart below illustrates the workflow of the project from data collection to predictions.
+</p>
+<div class="container1">
+    <div class="image-container1" onclick="openPopup('{{ url_for('static', filename='images/flowchart.png') }}', 'Project Flowchart')">
+        <img src="{{ url_for('static', filename='images/flowchart.png') }}" alt="flowchart1">
+        <p>flowchart1</p>
+    </div>
+    <div class="image-container1" onclick="openPopup('{{ url_for('static', filename='images/flowchart2.png') }}', 'Model Architecture')">
+        <img src="{{ url_for('static', filename='images/flowchart2.png') }}" alt="flowchart2">
+        <p>flowchart2</p>
+    </div>
+</div>
+
+<!-- Popup Modal -->
+<div id="image-popup" class="popup">
+    <span class="close" onclick="closePopup()">&times;</span>
+    <img class="popup-content" id="popup-img" src="" alt="Popup Image">
+    <div id="popup-title" class="popup-title"></div>
+</div>
+
+<script>
+    function openPopup(imageUrl, title) {
+        const popup = document.getElementById('image-popup');
+        const popupImg = document.getElementById('popup-img');
+        const popupTitle = document.getElementById('popup-title');
+        
+        popupImg.src = imageUrl;
+        popupTitle.textContent = title;
+        popup.style.display = "block";
+    }
+
+    function closePopup() {
+        const popup = document.getElementById('image-popup');
+        popup.style.display = "none";
+    }
+</script>
+
+{% endblock %}

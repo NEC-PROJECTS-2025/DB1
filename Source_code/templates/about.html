@@ -1,0 +1,91 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="about-section">
+    <div class="about-header">
+        <h2>About the Project</h2>
+    </div>
+    <div class="about-content">
+        <p>
+            <strong>A Universal Approach</strong> is a pioneering initiative aimed at enhancing skin condition diagnostics through cutting-edge artificial intelligence and machine learning. This project focuses on identifying various skin conditions, including both benign and malignant classes, using state-of-the-art deep learning models and an intuitive user interface. By leveraging advanced image processing techniques, our solution aspires to enable early detection and prevention, thus contributing significantly to improving healthcare outcomes.
+        </p>
+        <h3>Key Features</h3>
+        <ul>
+            <li>
+                <strong>Comprehensive Diagnostic Models:</strong> Integration of multiple deep learning architectures such as Vision Transformers (ViT), VGG19, ResNet50, and Capsule Networks for feature extraction.
+            </li>
+            <li>
+                <strong>Ensemble Classification:</strong> Machine learning classifiers like XGBoost, Random Forest, and SVC are combined using ensemble methods to improve prediction accuracy.
+            </li>
+            <li>
+                <strong>High Accuracy:</strong> Achieved over 92% accuracy in melanoma detection through advanced feature learning and majority voting strategies.
+            </li>
+            <li>
+                <strong>User-Friendly Interface:</strong> Designed for seamless interaction, ensuring accessibility for healthcare professionals and patients alike.
+            </li>
+            <li>
+                <strong>Real-World Application:</strong> Scalable for various medical diagnostic tasks beyond melanoma detection, showcasing the versatility of the proposed methodology.
+            </li>
+        </ul>
+        <h3>Innovative Contributions</h3>
+        <p>
+            This project adopts a hybrid approach by combining Convolutional Neural Networks (CNNs) with Vision Transformers (ViTs). It addresses the limitations of traditional methods by emphasizing critical features in dermoscopic images, thereby reducing false positives and negatives.
+        </p>
+        <p>
+            With the inclusion of ensemble techniques and optimized preprocessing, the project underscores its potential as a reliable tool for clinical use. Our methodology ensures precision and sensitivity, vital for life-saving early diagnoses.
+        </p>
+        <h3>Future Prospects</h3>
+        <p>
+            The project sets the foundation for more generalized applications in medical imaging. By adapting the models for other diagnostic tasks and fostering collaborations with medical experts, the framework paves the way for advancements in AI-driven healthcare solutions.
+        </p>
+    </div>
+</div>
+<footer>
+    <p>&copy; Narasaraopeta Engineering college, Department of CSE.</p>
+</footer>
+
+<style>
+    .about-section {
+        background: linear-gradient(to bottom right, #ffffff, #5b769e);
+        padding: 40px 20px;
+        font-family: 'Arial', sans-serif;
+        color: #333;
+        line-height: 1.6;
+        box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        border-radius: 10px;
+        margin: 120px auto;
+        max-width: 900px;
+    }
+
+    .about-header h2 {
+        font-size: 2.5em;
+        text-align: center;
+        margin-bottom: 20px;
+        color: #444;
+        text-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    }
+
+    .about-content h3 {
+        font-size: 1.8em;
+        margin-top: 20px;
+        color: #555;
+        border-bottom: 2px solid #007bff;
+        display: inline-block;
+        padding-bottom: 5px;
+    }
+
+    .about-content p {
+        margin-bottom: 15px;
+    }
+
+    .about-content ul {
+        list-style-type: disc;
+        margin-left: 20px;
+    }
+
+    .about-content ul li {
+        margin-bottom: 10px;
+        font-size: 1.1em;
+    }
+</style>
+{% endblock %}

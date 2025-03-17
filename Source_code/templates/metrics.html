@@ -1,0 +1,75 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="scrollable-content">
+    <h2 style="font-size: 30px;text-shadow: 2px 2px 20px rgb(13, 13, 13);position: absolute;left: 38%;top: 27%;color: black;border-color: black;border-width: 3px;border-style: solid;padding: 3px;">
+        Model Evaluation Metrics
+    </h2>
+
+    <div class="predff1">
+        <p>
+            Below are the images of various outcomes of the project, including training and validation accuracy, loss, and confusion matrices.
+        </p>
+        <p style="position: relative;top: 2%;text-align: center;font-size: 30px;background-color: black;color: yellow;padding: 5px;">Training and Testing Accuracy graphs of all models</p>
+        <div class="image-grid">
+            
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/VGG19.png') }}" alt="Accuracy Plot">
+                <p>VGG 19</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/VGG16.png') }}" alt="Loss Plot">
+                <p>VGG 16</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/VIT.png') }}" alt="Confusion Matrix">
+                <p>VISION TRANSFORMER</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/CAPSNET.png') }}" alt="Precision Plot">
+                <p>CAPSULE NETWORK</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/RESNET.png') }}" alt="Recall Plot">
+                <p>RESNET 50</p>
+            </div>
+        </div>
+<hr><hr><hr><hr><hr><hr>
+        <div class="image-grid1">
+            <p style="position: absolute;top: 35%;text-align: center;font-size: 30px;background-color: black;color: yellow;padding: 5PX;">Confusion Matrix of all models</p>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/VGG19CM.png') }}" alt="Accuracy Plot">
+                <p>VGG19</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/VGG16CM.png') }}" alt="Loss Plot">
+                <p>VGG16</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/VITCM.png') }}" alt="Confusion Matrix">
+                <p>VISION TRANSFORMER</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/CAPSNETCN.png') }}" alt="Precision Plot">
+                <p>CAPSULE NETWORK</p>
+            </div>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/RESNETCM.png') }}" alt="Recall Plot">
+                <p>RESNET 50</p>
+            </div>
+        </div>
+        <hr><hr><hr><hr><hr><hr>
+        <div class="image-grid2">
+            <p style="position: absolute;top: 72%;text-align: center;font-size: 30px;background-color: black;color: yellow;padding: 5PX;">Comparison of all Models Across Metrics</p>
+            <div class="image-container">
+                <img src="{{ url_for('static', filename='images/tab1.png') }}" alt="Accuracy Plot">
+                <p>Comparison of all Models Across Metrics  </p>
+            </div>
+        </div>
+    </div>
+    
+    
+</div>        
+</div>
+
+{% endblock %}
